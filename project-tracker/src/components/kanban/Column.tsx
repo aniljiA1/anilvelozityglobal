@@ -1,17 +1,11 @@
 import TaskCard from "./TaskCard";
-
-type Task = {
-  id: string;
-  title: string;
-  description?: string;
-  status: string;
-};
+import type { Task, Status } from "../../types";
 
 type ColumnProps = {
   title: string;
-  status: string;
+  status: Status;
   tasks: Task[];
-  onDrop: (status: string) => void;
+  onDrop: (status: Status) => void;
   onDragStart: (id: string) => void;
 };
 
